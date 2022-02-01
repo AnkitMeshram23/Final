@@ -30,7 +30,7 @@ pipeline {
         }
       stage('Deployment') {
             steps {
-                sh 'cp /root/.jenkins/workspace/Final/target/mywebapp$BUILD_NUMBER.war /opt/tomcat/webapps'
+                sh 'cp /root/.jenkins/workspace/Final/target/$BUILD_NUMBER.war /opt/tomcat/webapps'
             }
         }
    stage('installing webapp') {
