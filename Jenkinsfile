@@ -30,7 +30,7 @@ pipeline {
         }
       stage('Deployment') {
             steps {
-                sh 'cp /root/.jenkins/workspace/Final/target/*.war /opt/tomcat/webapps'
+                sh 'cp /root/.jenkins/workspace/Java-pipeline/target/*.war /opt/tomcat/webapps'
             }
         }
    stage('installing webapp') {
