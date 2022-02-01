@@ -28,5 +28,15 @@ pipeline {
                 sh 'mvn test'
             }
         }
+      stage('Deployment') {
+            steps {
+                sh 'cp /root/.jenkins/workspace/Final/target/ mywebapp$BUILD_NUMBER.war /opt/tomcat/webapps'
+            }
+        }
+   stage('installing webapp') {
+            steps {
+                 sh '/opt/tomcat/bin/startup.sh'
+            }
+        }  
   }
 }
